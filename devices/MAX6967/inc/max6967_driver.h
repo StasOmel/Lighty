@@ -1,0 +1,43 @@
+#ifndef __MAX6967_DRIVER__H
+#define __MAX6967_DRIVER__H
+
+#include "system.h"
+
+#define MAX6967_P0_OUT_LEVEL_A	0x00
+#define MAX6967_P1_OUT_LEVEL_A	0x01
+#define MAX6967_P2_OUT_LEVEL_A	0x02
+#define MAX6967_P3_OUT_LEVEL_A	0x03
+#define MAX6967_P4_OUT_LEVEL_A	0x04
+#define MAX6967_P5_OUT_LEVEL_A	0x05
+#define MAX6967_P6_OUT_LEVEL_A	0x06
+#define MAX6967_P7_OUT_LEVEL_A	0x07
+#define MAX6967_P8_OUT_LEVEL_A	0x08
+#define MAX6967_P9_OUT_LEVEL_A	0x09
+
+#define CONFIG_A		0x10
+#define CONFIG_RUMP_UP_RUN_MODE	0x05
+#define CONFIG_RUN_MODE		0x01
+#define CONFIG_SHUTDOWN_MODE	0x00
+
+#define RAMP_DOWN_A		0x11
+#define RAMP_UP_A		0x12
+
+#define OUT_CURRENT_7_0_A	0x13
+#define OUT_CURRENT_9_8_A	0x14
+#define GLOBAL_CURRENT_A	0x15
+
+
+#define OUT_VALUE_LED_OFF		0xFF
+#define OUT_LOGIC_LOW			0x00
+#define OUT_LOGIC_HIGH			0x01
+#define OUT_CONSTANT_CURRENT	0x02
+
+#define OUT_PWM_VALUE_MIN		0x03
+#define OUT_PWM_VALUE_MAX		0xFE
+
+void MAX6967_PowerUp(void);
+void MAX6967_Shutdown(void);
+void MAX6967_OutPWMWrite(uint32_t OUTn, uint32_t value);
+
+
+#endif /* __MAX6967_DRIVER_H */

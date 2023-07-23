@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G" name="Lighty_Coocox">
+  <Target name="Lighty_Coocox" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="318" chipName="STM32F103T8" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="4"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F103T8"/>
+          <Define name="STM32F10X_MD"/>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="__ASSEMBLY__"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="Library" value="Use base C Library"/>
+        <Option name="nostartfiles" value="1"/>
+        <Option name="UserEditLinker" value=""/>
+        <Option name="Printf" value="1"/>
+        <LinkedLibraries>
+          <Libset dir="c:\armgcc\arm-none-eabi\lib\thumb\" libs="m"/>
+        </LinkedLibraries>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00010000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00005000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="c:/coocox/coide_178/configuration/programdata/lighty_coocox/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="Lighty_Coocox"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="100K"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="./stm32f10x_md_64.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="30" name="C Library" path="" type="2"/>
+    <Component id="33" name="Semihosting" path="" type="2"/>
+    <Component id="50" name="CMSIS core" path="" type="2"/>
+    <Component id="439" name="CMSIS_Boot" path="" type="2"/>
+    <Component id="440" name="RCC" path="" type="2"/>
+    <Component id="442" name="PWR" path="" type="2"/>
+    <Component id="443" name="BKP" path="" type="2"/>
+    <Component id="444" name="GPIO" path="" type="2"/>
+    <Component id="448" name="RTC" path="" type="2"/>
+    <Component id="455" name="FLASH" path="" type="2"/>
+    <Component id="456" name="TIM" path="" type="2"/>
+    <Component id="457" name="ADC" path="" type="2"/>
+    <Component id="468" name="USB_FS" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="stm_usb_fs_lib/inc/usb_init.h" path="stm_usb_fs_lib/inc/usb_init.h" type="1"/>
+    <File name="stm_usb_fs_lib/src" path="" type="2"/>
+    <File name="devices/MAX6967/src/max6967_driver.c" path="devices/MAX6967/src/max6967_driver.c" type="1"/>
+    <File name="devices/IR_TX/inc/ir_tx_driver.h" path="devices/IR_TX/inc/ir_tx_driver.h" type="1"/>
+    <File name="stm_usb_fs_lib/inc/usb_core.h" path="stm_usb_fs_lib/inc/usb_core.h" type="1"/>
+    <File name="hardware/inc/eeprom.h" path="hardware/inc/eeprom.h" type="1"/>
+    <File name="stm_usb_fs_lib/inc/usb_mem.h" path="stm_usb_fs_lib/inc/usb_mem.h" type="1"/>
+    <File name="usb_istr.c" path="usb_istr.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_pwr.h" path="stm_lib/inc/stm32f10x_pwr.h" type="1"/>
+    <File name="inc/modes.h" path="inc/modes.h" type="1"/>
+    <File name="hardware/src/i2c.c" path="hardware/src/i2c.c" type="1"/>
+    <File name="devices/inc/vector.h" path="devices/inc/vector.h" type="1"/>
+    <File name="devices/inc/memory.h" path="devices/inc/memory.h" type="1"/>
+    <File name="usb_pwr.c" path="usb_pwr.c" type="1"/>
+    <File name="stm_lib/src/misc.c" path="stm_lib/src/misc.c" type="1"/>
+    <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
+    <File name="devices/LSM303DLHC" path="" type="2"/>
+    <File name="inc/stm32f10x_it.h" path="inc/stm32f10x_it.h" type="1"/>
+    <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
+    <File name="devices" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_flash.h" path="stm_lib/inc/stm32f10x_flash.h" type="1"/>
+    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
+    <File name="devices/sensors.c" path="devices/sensors.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_spi.h" path="stm_lib/inc/stm32f10x_spi.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_adc.c" path="stm_lib/src/stm32f10x_adc.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_dma.h" path="stm_lib/inc/stm32f10x_dma.h" type="1"/>
+    <File name="hardware/src/timer.c" path="hardware/src/timer.c" type="1"/>
+    <File name="inc/tools.h" path="inc/tools.h" type="1"/>
+    <File name="stm_usb_fs_lib/src/usb_sil.c" path="stm_usb_fs_lib/src/usb_sil.c" type="1"/>
+    <File name="STM32F10x_DSP_Lib/asm/gcc/cr4_fft_64_stm32.s" path="STM32F10x_DSP_Lib/src/asm/gcc/cr4_fft_64_stm32.s" type="1"/>
+    <File name="stm_lib/src/stm32f10x_bkp.c" path="stm_lib/src/stm32f10x_bkp.c" type="1"/>
+    <File name="cmsis_boot/startup/startup_stm32f10x_md.c" path="cmsis_boot/startup/startup_stm32f10x_md.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
+    <File name="usb_prop.c" path="usb_prop.c" type="1"/>
+    <File name="hardware/src/eeprom.c" path="hardware/src/eeprom.c" type="1"/>
+    <File name="devices/LSM303DLHC/src/lsm303dlhc_driver.c" path="devices/LSM303DLHC/src/lsm303dlhc_driver.c" type="1"/>
+    <File name="stm_usb_fs_lib/inc/usb_sil.h" path="stm_usb_fs_lib/inc/usb_sil.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
+    <File name="stm_lib/inc/misc.h" path="stm_lib/inc/misc.h" type="1"/>
+    <File name="stm_usb_fs_lib/src/usb_int.c" path="stm_usb_fs_lib/src/usb_int.c" type="1"/>
+    <File name="STM32F10x_DSP_Lib/inc" path="" type="2"/>
+    <File name="hardware/inc/hw_config.h" path="hardware/inc/hw_config.h" type="1"/>
+    <File name="hardware/src/usb.c" path="hardware/src/usb.c" type="1"/>
+    <File name="STM32F10x_DSP_Lib/src" path="" type="2"/>
+    <File name="inc/usb_prop.h" path="inc/usb_prop.h" type="1"/>
+    <File name="stm_usb_fs_lib/inc" path="" type="2"/>
+    <File name="inc/usb_conf.h" path="inc/usb_conf.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_rcc.c" path="stm_lib/src/stm32f10x_rcc.c" type="1"/>
+    <File name="stm_usb_fs_lib/inc/usb_conf.h" path="stm_usb_fs_lib/inc/usb_conf.h" type="1"/>
+    <File name="inc/system.h" path="inc/system.h" type="1"/>
+    <File name="stm_usb_fs_lib/inc/usb_def.h" path="stm_usb_fs_lib/inc/usb_def.h" type="1"/>
+    <File name="devices/outputs.c" path="devices/outputs.c" type="1"/>
+    <File name="devices/IR_TX/src" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_bkp.h" path="stm_lib/inc/stm32f10x_bkp.h" type="1"/>
+    <File name="devices/LSM303DLHC/src" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_dma.c" path="stm_lib/src/stm32f10x_dma.c" type="1"/>
+    <File name="stm_lib/src" path="" type="2"/>
+    <File name="devices/MAX6967" path="" type="2"/>
+    <File name="cmsis" path="" type="2"/>
+    <File name="modes.c" path="modes.c" type="1"/>
+    <File name="STM32F10x_DSP_Lib/inc/stm32_dsp.h" path="STM32F10x_DSP_Lib/inc/stm32_dsp.h" type="1"/>
+    <File name="stm_lib" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_exti.h" path="stm_lib/inc/stm32f10x_exti.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_adc.h" path="stm_lib/inc/stm32f10x_adc.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
+    <File name="hardware/inc/i2c.h" path="hardware/inc/i2c.h" type="1"/>
+    <File name="hardware/inc/spi.h" path="hardware/inc/spi.h" type="1"/>
+    <File name="stm_usb_fs_lib/inc/usb_lib.h" path="stm_usb_fs_lib/inc/usb_lib.h" type="1"/>
+    <File name="devices/MAX6967/inc" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_i2c.c" path="stm_lib/src/stm32f10x_i2c.c" type="1"/>
+    <File name="devices/VCLN4000/src/vcln4000_driver.c" path="devices/VCLN4000/src/vcln4000_driver.c" type="1"/>
+    <File name="STM32F10x_DSP_Lib" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_rtc.c" path="stm_lib/src/stm32f10x_rtc.c" type="1"/>
+    <File name="devices/memory.c" path="devices/memory.c" type="1"/>
+    <File name="main.c" path="main.c" type="1"/>
+    <File name="hardware/inc/usb.h" path="hardware/inc/usb.h" type="1"/>
+    <File name="hardware/src/hw_config.c" path="hardware/src/hw_config.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_tim.h" path="stm_lib/inc/stm32f10x_tim.h" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="hardware/src/adc.c" path="hardware/src/adc.c" type="1"/>
+    <File name="semihosting/sh_cmd.s" path="semihosting/sh_cmd.s" type="1"/>
+    <File name="stm_lib/src/stm32f10x_tim.c" path="stm_lib/src/stm32f10x_tim.c" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="stm_usb_fs_lib/inc/usb_regs.h" path="stm_usb_fs_lib/inc/usb_regs.h" type="1"/>
+    <File name="hardware/src/spi.c" path="hardware/src/spi.c" type="1"/>
+    <File name="stm_usb_fs_lib/inc/usb_int.h" path="stm_usb_fs_lib/inc/usb_int.h" type="1"/>
+    <File name="STM32F10x_DSP_Lib/src/iir_stm32.c" path="STM32F10x_DSP_Lib/src/iir_stm32.c" type="1"/>
+    <File name="semihosting/semihosting.c" path="semihosting/semihosting.c" type="1"/>
+    <File name="devices/inc/outputs.h" path="devices/inc/outputs.h" type="1"/>
+    <File name="devices/IR_TX" path="" type="2"/>
+    <File name="hardware/inc/timer.h" path="hardware/inc/timer.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_spi.c" path="stm_lib/src/stm32f10x_spi.c" type="1"/>
+    <File name="hardware/inc" path="" type="2"/>
+    <File name="hardware/src" path="" type="2"/>
+    <File name="inc/usb_pwr.h" path="inc/usb_pwr.h" type="1"/>
+    <File name="inc/usb_istr.h" path="inc/usb_istr.h" type="1"/>
+    <File name="stm_usb_fs_lib/src/usb_mem.c" path="stm_usb_fs_lib/src/usb_mem.c" type="1"/>
+    <File name="cmsis/core_cm3.c" path="cmsis/core_cm3.c" type="1"/>
+    <File name="devices/VCLN4000/inc/vcln4000_driver.h" path="devices/VCLN4000/inc/vcln4000_driver.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_rtc.h" path="stm_lib/inc/stm32f10x_rtc.h" type="1"/>
+    <File name="hardware" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_pwr.c" path="stm_lib/src/stm32f10x_pwr.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
+    <File name="devices/inc/sensors.h" path="devices/inc/sensors.h" type="1"/>
+    <File name="STM32F10x_DSP_Lib/asm" path="" type="2"/>
+    <File name="devices/IR_TX/inc" path="" type="2"/>
+    <File name="stm_usb_fs_lib" path="" type="2"/>
+    <File name="cmsis/core_cm3.h" path="cmsis/core_cm3.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_exti.c" path="stm_lib/src/stm32f10x_exti.c" type="1"/>
+    <File name="stm_usb_fs_lib/src/usb_init.c" path="stm_usb_fs_lib/src/usb_init.c" type="1"/>
+    <File name="stm_usb_fs_lib/src/usb_core.c" path="stm_usb_fs_lib/src/usb_core.c" type="1"/>
+    <File name="inc/usb_desc.h" path="inc/usb_desc.h" type="1"/>
+    <File name="semihosting" path="" type="2"/>
+    <File name="inc" path="" type="2"/>
+    <File name="stm32f10x_it.c" path="stm32f10x_it.c" type="1"/>
+    <File name="devices/MAX6967/src" path="" type="2"/>
+    <File name="stm_usb_fs_lib/inc/usb_type.h" path="stm_usb_fs_lib/inc/usb_type.h" type="1"/>
+    <File name="tools.c" path="tools.c" type="1"/>
+    <File name="devices/VCLN4000/src" path="" type="2"/>
+    <File name="STM32F10x_DSP_Lib/src/PID_C_stm32.c" path="STM32F10x_DSP_Lib/src/PID_C_stm32.c" type="1"/>
+    <File name="devices/LSM303DLHC/inc" path="" type="2"/>
+    <File name="inc/main.h" path="inc/main.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_flash.c" path="stm_lib/src/stm32f10x_flash.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
+    <File name="devices/inc" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_i2c.h" path="stm_lib/inc/stm32f10x_i2c.h" type="1"/>
+    <File name="syscalls" path="" type="2"/>
+    <File name="stm_usb_fs_lib/src/usb_regs.c" path="stm_usb_fs_lib/src/usb_regs.c" type="1"/>
+    <File name="devices/vector.c" path="devices/vector.c" type="1"/>
+    <File name="semihosting/semihosting.h" path="semihosting/semihosting.h" type="1"/>
+    <File name="STM32F10x_DSP_Lib/inc/table_fft.h" path="STM32F10x_DSP_Lib/inc/table_fft.h" type="1"/>
+    <File name="devices/MAX6967/inc/max6967_driver.h" path="devices/MAX6967/inc/max6967_driver.h" type="1"/>
+    <File name="devices/VCLN4000/inc" path="" type="2"/>
+    <File name="devices/IR_TX/src/ir_tx_driver.c" path="devices/IR_TX/src/ir_tx_driver.c" type="1"/>
+    <File name="devices/LSM303DLHC/inc/lsm303dlhc_driver.h" path="devices/LSM303DLHC/inc/lsm303dlhc_driver.h" type="1"/>
+    <File name="devices/VCLN4000" path="" type="2"/>
+    <File name="stm_lib/inc" path="" type="2"/>
+    <File name="usb_endp.c" path="usb_endp.c" type="1"/>
+    <File name="STM32F10x_DSP_Lib/asm/gcc" path="" type="2"/>
+    <File name="hardware/inc/adc.h" path="hardware/inc/adc.h" type="1"/>
+    <File name="usb_desc.c" path="usb_desc.c" type="1"/>
+  </Files>
+</Project>
